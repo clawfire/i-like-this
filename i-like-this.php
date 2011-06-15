@@ -272,6 +272,9 @@ function getILikeThis($arg) {
     if ($arg == 'put') {
 	    return $iLikeThis;
     }
+	else if ($arg == 'count'){
+    	echo $count;
+    }
     else {
     	echo $iLikeThis;
     }
