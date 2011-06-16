@@ -167,14 +167,12 @@ function ILikeThisAdminContent() {
 }
 ####
 
-
-#### WIDGET ####
-function most_liked_posts($numberOf, $before, $after, $show_count) {
+function most_liked_posts($numberOf, $before, $after, $show_count, $post_type="post") {
 	global $wpdb;
 
     $request = "SELECT ID, post_title, meta_value FROM $wpdb->posts, $wpdb->postmeta";
     $request .= " WHERE $wpdb->posts.ID = $wpdb->postmeta.post_id";
-    $request .= " AND post_status='publish' AND post_type='post' AND meta_key='_liked'";
+    $request .= " AND post_status='publish' AND post_type='$post_type' AND meta_key='_liked'";
     $request .= " ORDER BY $wpdb->postmeta.meta_value+0 DESC LIMIT $numberOf";
     $posts = $wpdb->get_results($request);
 
@@ -189,6 +187,7 @@ function most_liked_posts($numberOf, $before, $after, $show_count) {
     }
 }
 
+#### WIDGET ####
 function add_widget_most_liked_posts() {
 	function widget_most_liked_posts($args) {
 		extract($args);
@@ -282,7 +281,7 @@ function getILikeThis($arg) {
 	    return $iLikeThis;
     }
 	else if ($arg == 'count'){
-    	echo $count;
+    	echo $liked;
     }
     else {
     	echo $iLikeThis;
