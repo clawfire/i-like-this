@@ -1,16 +1,17 @@
 === Plugin Name ===
-Contributors: Benoit "LeBen" Burgener
+Contributors: Thibault Milan , Benoit "LeBen" Burgener
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=benoit.burgener@gmail.com&item_name=Wordpress%20plugin
 Tags: like, love, post, rate, rating, heart
 Requires at least: 2.5
-Tested up to: 2.9.2
-Stable tag: 2.9.2.2
+Tested up to: 3.1.3
+Stable tag: 3.1.3
 
 == Description ==
 
+Based on [Benoit "LeBen" Burgener](http://benoitburgener.com/) work
 This plugin allows your visitors to simply like your posts instead of comment it.
 
-You like this plugin? [Donate!](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=benoit.burgener@gmail.com&item_name=Wordpress%20plugin)
+You like this plugin? We too :D
 
 = This plugin include =
 * A counter/button to display the number of "like" and to vote.
@@ -24,13 +25,13 @@ You like this plugin? [Donate!](https://www.paypal.com/cgi-bin/webscr?cmd=_xclic
 
 == Frequently Asked Questions ==
 
-Take a look at the [official "I Like This" FAQ](http://my-tapestry.tenderapp.com/faqs/plugins/i-like-this).
+Coming soon ...
 
-You can also visit the [support center](http://my-tapestry.tenderapp.com/) and [start a discussion](https://my-tapestry.tenderapp.com/discussion/new) if needed.
+Take a look at the [old "I Like This" FAQ](http://my-tapestry.tenderapp.com/faqs/plugins/i-like-this).
 
 == Screenshots ==
 
-Some screenshots are available on the [plugin homepage](http://www.my-tapestry.com/i-like-this/).
+Some screenshots still available on the [plugin homepage](http://www.my-tapestry.com/i-like-this/).
 
 == Changelog ==
 
