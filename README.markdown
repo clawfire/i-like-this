@@ -12,7 +12,7 @@ This plugin allows your visitors to simply like your posts instead of comment it
 
 You like this plugin? We too :D
 
-# This plugin include
+## This plugin include
 * A counter/button to display the number of "like" and to vote.
 * A widget and a function to display the X most liked posts.
 * A preference pane with some options.
