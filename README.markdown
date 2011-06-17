@@ -1,13 +1,13 @@
 # Plugin Name
-Contributors: Thibault Milan , Benoit "LeBen" Burgener
-Tags: like, love, post, rate, rating, heart
-Requires at least: 2.5
-Tested up to: 3.1.3
-Stable tag: 3.1.3
+Contributors: Thibault Milan , Benoit "LeBen" Burgener  
+Tags: like, love, post, rate, rating, heart  
+Requires at least: 2.5  
+Tested up to: 3.1.3  
+Stable tag: 3.1.3  
 
 # Description
 
-Based on [Benoit "LeBen" Burgener](http://benoitburgener.com/) work
+Based on [Benoit "LeBen" Burgener](http://benoitburgener.com/) work  
 This plugin allows your visitors to simply like your posts instead of comment it.
 
 You like this plugin? We too :D

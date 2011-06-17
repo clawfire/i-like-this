@@ -211,13 +211,13 @@ function most_liked_like_widget(){
 	
 	$return='<div class="ilt_counter_widget">';
     if (!isset($_COOKIE['liked-'.$post_ID]) && $voteStatusByIp == 0) {
-		$return.='<p class="ilt-counter-widget-btn"><a onclick="likeThis('.$post_ID.');">Vote!</a></p>'
+		$return.='<p class="ilt_counter_widget_btn"><a onclick="likeThis('.$post_ID.');">Vote!</a></p>';
     }
     else {
-    	$return.='<p class="ilt-counter-widget-btn liked">Voted</p>'
+    	$return.='<p class="ilt_counter_widget_btn liked">Voted</p>';
     }
     $return.= '<p class="ilt_counter_widget_counter">'.$liked.' ligths</p>';
-	$return.= '</div>'
+	$return.= '</div>';
 	echo $return;	
 }
 /**
