@@ -165,7 +165,15 @@ function ILikeThisAdminContent() {
 </div>
 <?php
 }
-####
+/**
+ * @abstract Get the most liked posts
+ * @param numberOf int - number of items returnes
+ * @param before string - string before the return if you want a printout return
+ * @param after string - string after the return if you want a printout return
+ * @param post_type post_type - Wordpress 3.0+ the custom post type you want to get, default to post to ensure 2.9+ compatibility
+ * @param raw bool - true if you want just an posts object to iterate, false to printout result
+ * @return Object if $raw is true, echo result if false
+ */
 
 function most_liked_posts($numberOf, $before, $after, $show_count, $post_type="post", $raw=false) {
 	global $wpdb;
@@ -189,8 +197,32 @@ function most_liked_posts($numberOf, $before, $after, $show_count, $post_type="p
 	    }
 	endif;
 }
-
-#### WIDGET ####
+/**
+ * Mini counter widget
+ */
+function most_liked_like_widget(){
+	global $wpdb;
+	$post_ID = get_the_ID();
+	$ip = $_SERVER['REMOTE_ADDR'];
+	
+    $liked = get_post_meta($post_ID, '_liked', true) != '' ? get_post_meta($post_ID, '_liked', true) : '0';
+	$voteStatusByIp = $wpdb->get_var("SELECT COUNT(*) FROM ".$wpdb->prefix."ilikethis_votes WHERE post_id = '$post_ID' AND ip = '$ip'");
+	
+	
+	$return='<div class="ilt_counter_widget">';
+    if (!isset($_COOKIE['liked-'.$post_ID]) && $voteStatusByIp == 0) {
+		$return.='<p class="ilt-counter-widget-btn"><a onclick="likeThis('.$post_ID.');">Vote!</a></p>'
+    }
+    else {
+    	$return.='<p class="ilt-counter-widget-btn liked">Voted</p>'
+    }
+    $return.= '<p class="ilt_counter_widget_counter">'.$liked.' ligths</p>';
+	$return.= '</div>'
+	echo $return;	
+}
+/**
+ * SIDEBAR WIDGET
+ */
 function add_widget_most_liked_posts() {
 	function widget_most_liked_posts($args) {
 		extract($args);
