@@ -215,7 +215,7 @@ function most_liked_like_widget(){
     else {
     	$return.='<p class="ilt_counter_widget_btn liked">Voted</p>';
     }
-    $return.= '<p class="ilt_counter_widget_counter" id="'.$post_ID.'">'.$liked.' ligths</p>';
+    $return.= '<p class="ilt_counter_widget_counter" id="'.$post_ID.'"><span class="count">'.$liked.'</span> ligths</p>';
 	$return.= '</div>';
 	echo $return;	
 }
