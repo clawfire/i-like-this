@@ -178,7 +178,7 @@ function ILikeThisAdminContent() {
 function most_liked_posts($numberOf, $before, $after, $show_count, $post_type="post", $raw=false) {
 	global $wpdb;
 
-    $request = "SELECT ID, post_title, meta_value FROM $wpdb->posts, $wpdb->postmeta";
+    $request = "SELECT * FROM $wpdb->posts, $wpdb->postmeta";
     $request .= " WHERE $wpdb->posts.ID = $wpdb->postmeta.post_id";
     $request .= " AND post_status='publish' AND post_type='$post_type' AND meta_key='_liked'";
     $request .= " ORDER BY $wpdb->postmeta.meta_value+0 DESC LIMIT $numberOf";
@@ -190,7 +190,6 @@ function most_liked_posts($numberOf, $before, $after, $show_count, $post_type="p
 	    	$post_title = stripslashes($post->post_title);
 	    	$permalink = get_permalink($post->ID);
 	    	$post_count = $post->meta_value;
-    	
 	    	echo $before.'<a href="' . $permalink . '" title="' . $post_title.'" rel="nofollow">' . $post_title . '</a>';
 			echo $show_count == '1' ? ' ('.$post_count.')' : '';
 			echo $after;
@@ -216,7 +215,7 @@ function most_liked_like_widget(){
     else {
     	$return.='<p class="ilt_counter_widget_btn liked">Voted</p>';
     }
-    $return.= '<p class="ilt_counter_widget_counter">'.$liked.' ligths</p>';
+    $return.= '<p class="ilt_counter_widget_counter" id="'.$post_ID.'">'.$liked.' ligths</p>';
 	$return.= '</div>';
 	echo $return;	
 }
