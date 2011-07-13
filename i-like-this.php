@@ -155,7 +155,7 @@ function ILikeThisAdminContent() {
 			<div class="inside">
 				<form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 				<input type="hidden" name="cmd" value="_xclick">
-				<input type="hidden" name="business" value="benoit.burgener@gmail.com">
+				<input type="hidden" name="business" value="clawfire@gmail.com">
 				<input type="hidden" name="item_name" value="Wordpress plugin">
 				<input type="image" src="http://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit">
 				</form>
@@ -215,7 +215,7 @@ function most_liked_like_widget(){
     else {
     	$return.='<p class="ilt_counter_widget_btn liked">Voted</p>';
     }
-    $return.= '<p class="ilt_counter_widget_counter" id="'.$post_ID.'"><span class="count">'.$liked.'</span> ligths</p>';
+    $return.= '<p class="ilt_counter_widget_counter" id="'.$post_ID.'">'.$liked.' ligths</p>';
 	$return.= '</div>';
 	echo $return;	
 }

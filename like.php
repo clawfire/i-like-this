@@ -16,10 +16,10 @@ if($post_ID != '') {
 		setcookie('liked-'.$post_ID, time(), time()+3600*24*365, '/');
 		$wpdb->query("INSERT INTO ".$wpdb->prefix."ilikethis_votes VALUES ('', NOW(), '$post_ID', '$ip')");
 
-		echo $likeNew;
+		echo $likeNew.' lights';
 	}
 	else {
-		echo $like;
+		echo $like.' lights';
 	}
 }
 ?>
