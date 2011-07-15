@@ -182,14 +182,14 @@ function most_liked_posts($numberOf, $before, $after, $show_count, $post_type="p
     $request .= " WHERE $wpdb->posts.ID = $wpdb->postmeta.post_id";
     $request .= " AND post_status='publish' AND post_type='$post_type' AND meta_key='_liked'";
     $request .= " ORDER BY $wpdb->postmeta.meta_value+0 DESC LIMIT $numberOf";
-    $posts = $wpdb->get_results($request);
+    $posts = $wpdb->get_results($request)r;
 	if ($raw):
 		return $posts;
 	else:
-		foreach ($posts as $post) {
-	    	$post_title = stripslashes($post->post_title);
-	    	$permalink = get_permalink($post->ID);
-	    	$post_count = $post->meta_value;
+		foreach ($posts as $item) {
+	    	$post_title = stripslashes($item->post_title);
+	    	$permalink = get_permalink($item->ID);
+	    	$post_count = $item->meta_value;
 	    	echo $before.'<a href="' . $permalink . '" title="' . $post_title.'" rel="nofollow">' . $post_title . '</a>';
 			echo $show_count == '1' ? ' ('.$post_count.')' : '';
 			echo $after;
