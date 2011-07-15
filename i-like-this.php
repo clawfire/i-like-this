@@ -182,7 +182,7 @@ function most_liked_posts($numberOf, $before, $after, $show_count, $post_type="p
     $request .= " WHERE $wpdb->posts.ID = $wpdb->postmeta.post_id";
     $request .= " AND post_status='publish' AND post_type='$post_type' AND meta_key='_liked'";
     $request .= " ORDER BY $wpdb->postmeta.meta_value+0 DESC LIMIT $numberOf";
-    $posts = $wpdb->get_results($request)r;
+    $posts = $wpdb->get_results($request);
 	if ($raw):
 		return $posts;
 	else:
