@@ -10,7 +10,8 @@ Stable tag: 3.1.3
 Based on [Benoit "LeBen" Burgener](http://benoitburgener.com/) work  
 This plugin allows your visitors to simply like your posts instead of comment it.
 
-You like this plugin? We too :D
+You like this plugin? We too :D  
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=clawfire&url=https://github.com/clawfire/i-like-this&title=i Like This Plugin&language=&tags=github&category=software)
 
 ## This plugin include
 * A counter/button to display the number of "like" and to vote.
